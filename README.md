@@ -48,3 +48,28 @@ The application will be accessible at `http://localhost:3000`.
 npm run build
 ```
 The compiled static assets will be output to the `dist/` directory, ready to be deployed directly to Cloudflare Pages, Vercel, Netlify, or any static host.
+
+
+## Deployment Instructions
+
+### Google AI Studio to GitHub
+
+1. Build and test the Weather Intelligence App in Google AI Studio App Build.
+2. Use the direct GitHub connection in Google AI Studio to connect the generated app to the approved GitHub repository.
+3. Verify that the generated application source, `package.json`, and `README.md` are present in the GitHub repository.
+
+### GitHub to Cloudflare Pages
+
+1. Open Cloudflare Workers & Pages and create a Pages project using the GitHub repository connected through Google AI Studio.
+2. Select the GitHub repository and the production branch.
+3. Configure the build settings:
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+4. Save and deploy the application.
+5. Open the generated `pages.dev` URL to validate the deployment.
+
+### Deployment Validation
+
+1. Test the application with at least two valid cities.
+2. Test an invalid city or API error condition.
+3. Refresh the browser and confirm the application continues to load.
